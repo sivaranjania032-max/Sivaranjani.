@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Sign Up</title>
+</head>
+<body>
+  <h2>User Sign Up</h2>
+
+  <form onsubmit="signup(); return false;">
+    Name: <input type="text" id="name" required><br><br>
+    Email: <input type="email" required><br><br>
+    Password: <input type="password" required><br><br>
+
+    <input type="submit" value="Sign Up">
+  </form>
+
+  <script>
+    function signup() {
+      var name = document.getElementById("name").value;
+      localStorage.setItem("username", name);
+      window.location.href = "welcome.html";
+    }
+  </script>
+</body>
+</html>
